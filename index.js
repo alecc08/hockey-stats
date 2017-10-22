@@ -2,7 +2,7 @@
 let request = require("request");
 let mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
-let config = require("./config");
+let config = require("F:/config/config.js"); //change this to your own
 mongoose.connect(config.db);
 let Player = require('./lib/model/Player');
 let moment = require('moment');
