@@ -1,17 +1,19 @@
 {
-  "name": "nhl-rest-reader",
+  "name": "hockey-stats",
   "version": "0.0.1",
   "description": "Read REST Api and save in mongoDB",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "alec",
+  "repository": "https://github.com/alecc08/hockey-stats.git",
+  "author": "alecc08 ",
   "license": "MIT",
   "dependencies": {
     "bluebird": "^3.5.1",
     "moment": "^2.19.1",
     "mongoose": "^4.12.1",
-    "request": "^2.83.0"
+    "request": "^2.83.0",
+    "sqlite3": "^3.1.13"
   }
 }
