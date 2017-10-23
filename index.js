@@ -53,24 +53,31 @@ function processPlayerData(data) {
                 if(err) console.log(err);
                 if(dbPlayer) {
                     console.log("Found db player");
-                    let updatePlayer = "UPDATE players SET";
+                    let updatePlayer = "UPDATE players SET ";
+                    updatePlayer += Object.keys(player).map((key) => {
+                        if(typeof player[key] == "string") {
+                            return key + "=" + '"' + player[key] + '"';
+                        } else {
+                            return key + "=" + player[key] || 0;
+                        }
+                    }).join(",");
+                    updatePlayer += " WHERE playerId = " + player.playerId;
+                    console.log(updatePlayer);
+                    db.run(updatePlayer);
                 } else {
                     console.log("Didnt find db player");
                     let insertPlayer = "INSERT INTO players(lastUpdated," + Object.keys(player).join(",") + ") ";
-                    let values = Object.keys(player).map(
-                        (key) => { 
-                            if(typeof player[key] == "string") {
-                                return '"' + player[key] + '"';
-                            } else {
-                                return player[key] || 0;
-                            }
-                        });
+                    let values = Object.keys(player).map((key) => { 
+                        if(typeof player[key] == "string") {
+                            return '"' + player[key] + '"';
+                        } else {
+                            return player[key] || 0;
+                        }
+                    });
                     insertPlayer += "VALUES (" + new moment().unix() + "," + values.join(",") + ")";
                     console.log(insertPlayer);
                     db.run(insertPlayer);
-                
                 }
-
             });
         });
 
