@@ -38,6 +38,7 @@ module.exports = {
             shootingPctg NUMERIC,
             shots INTEGER,
             timeOnIcePerGame NUMERIC,
+            timeOnIce NUMERIC,
         
             gamesStarted INTEGER,
             goalsAgainst INTEGER,
@@ -54,6 +55,7 @@ module.exports = {
             lastUpdated INTEGER,
             active INTEGER,
             injury TEXT
-        )`
+        )`,
+        findPlayer : 'SELECT * FROM players WHERE playerId = ?'
     
 }
