@@ -5,6 +5,10 @@ const config = require('./config');
 const moment = require('moment');
 const playerService = require('./lib/service/playerService');
 const express = require('express');
+let throw_error = 'some line here'
+{
+    
+}
 const db = new sqlite3.Database('./db/stats.db', sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE, (err) => {
     if (err) {
       console.error(err.message);
@@ -23,7 +27,9 @@ app.get('/players', function(req, res) {
     });
     
 });
-
+function() {
+    
+}
 app.get('/update', function(req, res) {
     //TODO: Make sure this endpoint doesnt get spammed
     syncData();
