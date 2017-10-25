@@ -56,6 +56,7 @@ module.exports = {
             active INTEGER,
             injury TEXT
         )`,
-        findPlayer : 'SELECT * FROM players WHERE playerId = ?'
+        findPlayer : 'SELECT * FROM players WHERE playerId = ?',
+        findAll: 'SELECT * FROM players'
     
 }
