@@ -1,10 +1,10 @@
 {
   "name": "hockey-stats",
-  "version": "0.0.1",
-  "description": "Read REST Api and save in mongoDB",
+  "version": "0.0.2",
+  "description": "Read REST Api and save in db for caching",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"todo: run some actual tests\" && exit 0"
   },
   "repository": "https://github.com/alecc08/hockey-stats.git",
   "author": "alecc08 ",
