@@ -27,8 +27,9 @@ app.get('/players', function(req, res) {
     });
     
 });
-function() {
-    
+var fun = {
+  funfun : function() {
+  } 
 }
 app.get('/update', function(req, res) {
     //TODO: Make sure this endpoint doesnt get spammed
@@ -63,3 +64,9 @@ function syncData() {
         playerService.processPlayerData(data,db);
     });
 }
+
+
+
+app.listen(process.env.PORT || 8080, function() {
+    console.log("Server started.");
+});

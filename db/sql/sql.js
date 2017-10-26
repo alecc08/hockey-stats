@@ -59,4 +59,4 @@ module.exports = {
         findPlayer : 'SELECT * FROM players WHERE playerId = ?',
         findAll: 'SELECT * FROM players'
     
-}
+};
