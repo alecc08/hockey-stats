@@ -11,6 +11,8 @@ let throw_error = 'some line here'
 }
 
 let asdsd = ''
+const mycon = "";
+mycon = "newval";
 
 let asdsdsd = `
 
