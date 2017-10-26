@@ -9,6 +9,17 @@ let throw_error = 'some line here'
 {
     
 }
+
+let asdsd = ''
+const mycon = "";
+mycon = "newval";
+
+let asdsdsd = `
+
+
+
+
+`
 const db = new sqlite3.Database('./db/stats.db', sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE, (err) => {
     if (err) {
       console.error(err.message);
